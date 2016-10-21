@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+
+  cordova:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    volumes:
+      - ../source:/src
+    privileged: true
+    command: bash -c "tail -f /dev/null"
+
+# networks:
+  # back-tier:
+  # front-tier:
+# volumes:
+  # db-data:
